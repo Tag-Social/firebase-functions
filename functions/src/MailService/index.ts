@@ -10,9 +10,9 @@ import { google } from 'googleapis';
 export const sendEmail = functions.firestore.document('/mail/{documentId}')
     .onCreate(async (snap) => {
       const funcConfig = functions.config();
-      const clientID = funcConfig.smtpserver.provider.client_id ;
-      const clientSecret = funcConfig.smtpserver.provider.client_secret;
-      const refreshToken = funcConfig.smtpserver.provider.client_refresh_token;
+      const clientID = funcConfig.smtpserver.provider_client_id ;
+      const clientSecret = funcConfig.smtpserver.provider_client_secret;
+      const refreshToken = funcConfig.smtpserver.provider_client_refresh_token;
       const OAuth2 = google.auth.OAuth2;
       const oauth2Client = new OAuth2(
         clientID,
