@@ -1,1 +1,7 @@
-{}
+{
+  "projects": {
+    "dev": "tag-app-81b10",
+    "default": "tag-app-81b10"
+  },
+  "targets": {}
+}
