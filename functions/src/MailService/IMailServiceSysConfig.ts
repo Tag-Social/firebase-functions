@@ -2,8 +2,8 @@
  * Imail service sys config
  */
 export interface IMailServiceSysConfig { 
-    Service: string;
+    Service: string
     Auth: {}
-    SMTPServerConnectionString: string; 
-    SMTPFromAddress: string;
+    SMTPServerConnectionString: string
+    SMTPFromAddress: string
 } 

@@ -14,7 +14,7 @@ export class MailService {
     this._config = config;
     this._transporter = nodemailer.createTransport({
       service: this._config.Service,
-      auth: this._config.Auth
+      auth: this._config.Auth,
     });
   } 
   
@@ -23,7 +23,7 @@ export class MailService {
   sendMail(to: string, subject: string, content: string) 
   : Promise<void> 
   { 
-    let options = { 
+    const options = { 
       from: this._config.SMTPFromAddress, 
       to: to, 
       subject: subject, 
