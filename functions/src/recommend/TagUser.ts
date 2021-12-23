@@ -4,8 +4,6 @@ enum Questions {
     TYPE = "mentorship_type",
     FREQUENCY = "meeting_frequency",
     IMPACT = "impact",
-    DISTANCE = "distance",
-    EXPERIENCE = "mentorship_experience",
     COMMUNICATION = "communication",
 }
 
@@ -25,6 +23,9 @@ export class TagUser {
     private photoUrl: string;
     private occupation: string;
     private location: string;
+    private bio: string;
+    private interests: string[];
+    private commonInterests: string[];
 
     constructor(userId: string, questions: any) {
         this._userId = userId;
@@ -81,6 +82,22 @@ export class TagUser {
 
     public setLocation(location: string) {
         this.location = location;
+    }
+
+    public setBio(bio: string) {
+        this.bio = bio;
+    }
+
+    public setInterests(interest: string[]) {
+        this.interests = interest;
+    }
+
+    public getInterests() {
+        return this.interests;
+    }
+
+    public setCommonInterests(commonInterests: string[]) {
+        this.commonInterests = commonInterests;
     }
 
     private extractQuestions(questions: any) {
